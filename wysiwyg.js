@@ -14,6 +14,7 @@ function loadBookmarklet() {
       ],
       toolbar: 'bold italic underline sizeselect fontselect fontsizeselect | hr alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | insertfile undo redo | forecolor backcolor | code',
       fontsize_formats: "8px 10px 12px 14px 18px 24px 36px",
+      width: 600
     }); 
   }
   document.body.appendChild(scriptT);
