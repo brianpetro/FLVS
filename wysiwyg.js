@@ -1,6 +1,6 @@
 function loadBookmarklet() {
   var scriptT = document.createElement("script");
-  scriptT.src = "https://cloud.tinymce.com/stable/tinymce.min.js";
+  scriptT.src = "https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=zon5v23j3uazf0mu4agta3ae9zpzsytu9m62u2mxymok2w46";
   scriptT.type = "text/javascript";
   scriptT.onload = function(){
     tinyMCE.init({ 
@@ -18,4 +18,7 @@ function loadBookmarklet() {
   }
   document.body.appendChild(scriptT);
 }
+$('script[src*="tinymce.min.js"]').remove();
+delete tinyMCE;
+delete tinymce;
 loadBookmarklet();
