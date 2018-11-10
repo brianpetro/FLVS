@@ -17,6 +17,10 @@ function loadBookmarklet() {
     }); 
   }
   document.body.appendChild(scriptT);
+  $("#btnInsertComment").click(function(e){ 
+    e.preventDefault(); 
+    tinymce.activeEditor.execCommand('mceInsertContent', false, $("#insertFeedbackSnippets").find(":selected").attr("title"));
+  })
 }
 $('script[src*="tinymce.min.js"]').remove();
 delete tinyMCE;
