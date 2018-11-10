@@ -16,6 +16,19 @@ function loadBookmarklet() {
       fontsize_formats: "8px 10px 12px 14px 18px 24px 36px",
       width: 600
     }); 
+    tinyMCE.init({ 
+      selector: "#comText", 
+      menubar: false,
+      plugins: [
+        'advlist autolink autoresize lists link image charmap preview hr anchor pagebreak',
+        'searchreplace wordcount visualblocks visualchars code',
+        'insertdatetime media nonbreaking table contextmenu directionality',
+        'template paste textcolor colorpicker textpattern imagetools codesample'
+      ],
+      toolbar: 'bold italic underline sizeselect fontselect fontsizeselect | hr alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | insertfile undo redo | forecolor backcolor | code',
+      fontsize_formats: "8px 10px 12px 14px 18px 24px 36px",
+      width: 600
+    }); 
   }
   document.body.appendChild(scriptT);
   $("#btnInsertComment").click(function(e){ 
